@@ -1,0 +1,14 @@
+node_modules
+dist
+.output
+.vinxi
+.nitro
+.tanstack
+*.log
+.DS_Store
+
+# alchemy
+.alchemy
+.env
+.env.local
+.dev.vars
