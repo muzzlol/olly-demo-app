@@ -1,6 +1,7 @@
 import { HeadContent, Scripts, createRootRoute } from "@tanstack/react-router";
 
 import Header from "../components/Header";
+import { Toaster } from "@/components/ui/sonner";
 
 import appCss from "../styles.css?url";
 
@@ -15,7 +16,12 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "TanStack Start Starter",
+        title: "olly — autonomous SRE for your Cloudflare stack",
+      },
+      {
+        name: "description",
+        content:
+          "olly watches your logs, finds the bug, opens the PR. Live demo at 5pm IST.",
       },
     ],
     links: [
@@ -31,13 +37,14 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className="min-h-screen bg-background text-foreground antialiased">
         <Header />
         {children}
+        <Toaster />
         <Scripts />
       </body>
     </html>

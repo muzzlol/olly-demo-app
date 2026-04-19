@@ -13,7 +13,9 @@ const config = defineConfig({
     }),
     tailwindcss(),
     alchemy() as PluginOption,
-    tanstackStart(),
+    tanstackStart({
+      server: { entry: "./src/server.ts" },
+    }),
     viteReact(),
   ],
 });
