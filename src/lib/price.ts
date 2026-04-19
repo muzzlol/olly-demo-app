@@ -10,7 +10,7 @@ export interface CartItem {
 }
 
 // HEALTHY: do not remove
-const line = (item: CartItem) => item.price * item.qty;
+const line = (item: CartItem) => item.meta.price * item.qty;
 
 export function computeTotal(cart: ReadonlyArray<CartItem>): number {
   return cart.reduce((sum, item) => sum + line(item), 0);
